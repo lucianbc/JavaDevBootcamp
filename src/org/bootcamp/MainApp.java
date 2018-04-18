@@ -5,17 +5,20 @@ package org.bootcamp;
 public class MainApp {
 
     public static void main(String[] args) {
-        InsurancePolicyCalculator calculator = InsurancePolicyCalculator.INSTANCE;
 
-        final Car joesCar = new Car(5, 200000, true, "auto");
-        final Bus stevesBus = new Bus(3, 100000, true, 31);
-        final Tipper petersTipper = new Tipper(6, 80000, false, 15);
+        final InsurancePolicyCalculator calculator = InsurancePolicyCalculator.INSTANCE;
 
-        final int joesPaycheck = calculator.calculate(joesCar);
+        final Vehicle joesCar = new Car(5, 200000, true, "auto");
+        final Vehicle stevesBus = new Bus(3, 100000, true, 31);
+        final Vehicle petersTipper = new Tipper(6, 80000, false, 15);
 
-        final int stevesPaycheck = calculator.calculate(stevesBus);
+        final Formula carFormula = new CarBasicFormula();
+        final Formula busFormula = new BusBasicFormula();
+        final Formula tipperFormula = new TipperBasicFormula();
 
-        final int petersPaycheck = calculator.calculate(petersTipper);
+        int joesPaycheck = calculator.calculate(joesCar, carFormula);
+        int stevesPaycheck = calculator.calculate(stevesBus, busFormula);
+        int petersPaycheck = calculator.calculate(petersTipper, tipperFormula);
 
         System.out.println("Joe's policy cost is " + joesPaycheck);
         System.out.println("Steve's policy cost is " + stevesPaycheck);
