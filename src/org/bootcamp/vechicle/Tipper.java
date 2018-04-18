@@ -1,4 +1,4 @@
-package org.bootcamp;
+package org.bootcamp.vechicle;
 
 public final class Tipper extends Vehicle {
     private int capacityInTons = 0;

@@ -1,6 +1,16 @@
 package org.bootcamp;
 
 
+import org.bootcamp.calculate.InsurancePolicyCalculator;
+import org.bootcamp.formula.BusBasicFormula;
+import org.bootcamp.formula.CarBasicFormula;
+import org.bootcamp.formula.Formula;
+import org.bootcamp.formula.TipperBasicFormula;
+import org.bootcamp.vechicle.Bus;
+import org.bootcamp.vechicle.Car;
+import org.bootcamp.vechicle.Tipper;
+import org.bootcamp.vechicle.Vehicle;
+
 @SuppressWarnings({"squid:S3358", "squid:S106"})
 public class MainApp {
 

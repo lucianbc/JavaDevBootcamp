@@ -1,4 +1,4 @@
-package org.bootcamp;
+package org.bootcamp.vechicle;
 
 public abstract class Vehicle {
     private int age;
