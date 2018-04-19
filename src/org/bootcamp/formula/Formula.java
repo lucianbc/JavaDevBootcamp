@@ -2,7 +2,7 @@ package org.bootcamp.formula;
 
 import org.bootcamp.vechicle.Vehicle;
 
-public enum FormulaEnum {
+public enum Formula {
 
     BUS_BASIC_FORMULA() {
         @Override
