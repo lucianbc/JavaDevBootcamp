@@ -1,6 +1,6 @@
 package org.bootcamp.calculate;
 
-import org.bootcamp.formula.Formula;
+import org.bootcamp.formula.FormulaEnum;
 import org.bootcamp.vechicle.Vehicle;
 
 public final class InsurancePolicyCalculator {
@@ -9,7 +9,7 @@ public final class InsurancePolicyCalculator {
 
     private InsurancePolicyCalculator() {}
 
-    public int calculate(Vehicle vehicle, Formula formula) {
+    public int calculate(Vehicle vehicle, FormulaEnum formula) {
         return formula.calculate(vehicle);
     }
 }

@@ -2,10 +2,7 @@ package org.bootcamp;
 
 
 import org.bootcamp.calculate.InsurancePolicyCalculator;
-import org.bootcamp.formula.BusBasicFormula;
-import org.bootcamp.formula.CarBasicFormula;
-import org.bootcamp.formula.Formula;
-import org.bootcamp.formula.TipperBasicFormula;
+import org.bootcamp.formula.FormulaEnum;
 import org.bootcamp.vechicle.Bus;
 import org.bootcamp.vechicle.Car;
 import org.bootcamp.vechicle.Tipper;
@@ -22,13 +19,9 @@ public class MainApp {
         final Vehicle stevesBus = new Bus(3, 100000, true, 31);
         final Vehicle petersTipper = new Tipper(6, 80000, false, 15);
 
-        final Formula carFormula = new CarBasicFormula();
-        final Formula busFormula = new BusBasicFormula();
-        final Formula tipperFormula = new TipperBasicFormula();
-
-        int joesPaycheck = calculator.calculate(joesCar, carFormula);
-        int stevesPaycheck = calculator.calculate(stevesBus, busFormula);
-        int petersPaycheck = calculator.calculate(petersTipper, tipperFormula);
+        int joesPaycheck = calculator.calculate(joesCar, FormulaEnum.CAR_BASIC_FORMULA);
+        int stevesPaycheck = calculator.calculate(stevesBus, FormulaEnum.BUS_BASIC_FORMULA);
+        int petersPaycheck = calculator.calculate(petersTipper, FormulaEnum.TIPPER_BASIC_FORMULA);
 
         System.out.println("Joe's policy cost is " + joesPaycheck);
         System.out.println("Steve's policy cost is " + stevesPaycheck);
